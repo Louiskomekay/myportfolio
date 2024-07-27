@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - .125rem));
+    }
+}
+
+.ctaTicker {
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.ctaTicker ul {
+    animation: scroll 20s linear infinite;
+}
+
+.ctaTicker:hover ul {
+    animation-play-state: paused;
+}
