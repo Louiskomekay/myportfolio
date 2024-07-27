@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 
 const links = [{ title: 'about me', url: '/about' }, { title: 'projects', url: '/projects' }, { title: 'contact me', url: '/contact' }]
+const MobileLinks = [{ title: 'home', url: '/' }, { title: 'about me', url: '/about' }, { title: 'projects', url: '/projects' }, { title: 'contact me', url: '/contact' }]
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,7 @@ const Navbar = () => {
                                         key={title}
                                     >
                                         <li
-                                            className={`${isActive ? 'text-[#E1602F] hover:none' : 'hover:text-[#6558f2] transition ease-in-out duration-450 cursor-pointer'} h-full block`}
+                                            className={`${isActive ? 'text-[#E1602F] hover:none' : 'transition ease-in-out duration-450 cursor-pointer'} h-full block`}
                                         >
                                             <Link href={url}>{title}</Link>
                                         </li>
@@ -50,11 +51,9 @@ const Navbar = () => {
                     <div className="relative">
                         <div className="flex justify-between mx-auto sm:w-[90%]">
                             {/* logo */}
-                            <button onClick={() => { setIsOpen(!isOpen) }}>
-                                <Link href='/' className="cursor-pointer">
-                                    <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499416/My%20portfolio/logo_orange_ocwd0o.png" alt="logo" className="w-28" />
-                                </Link>
-                            </button>
+                            <Link href='/' className="cursor-pointer">
+                                <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499416/My%20portfolio/logo_orange_ocwd0o.png" alt="logo" className="w-28" />
+                            </Link>
 
                             <button className="flex items-center" onClick={() => { setIsOpen(!isOpen) }}>
                                 {!isOpen ?
@@ -70,8 +69,8 @@ const Navbar = () => {
                         </div>
 
                         {/* Links */}
-                        <ul className={`${!isOpen ? 'left-[-80rem]' : 'left-[0rem]'} bg-white absolute w-full h-[100vh] top-[4.5rem] text-center capitalize pt-[25rem] ease-in-out duration-700`}>
-                            {links.map((link) => {
+                        <ul className={`${!isOpen ? 'left-[-80rem]' : 'left-[0rem]'} bg-white absolute w-full h-[100vh] top-[4.5rem] text-center capitalize pt-[18rem] ease-in-out duration-700`}>
+                            {MobileLinks.map((link) => {
                                 const { title, url } = link;
 
                                 return (
