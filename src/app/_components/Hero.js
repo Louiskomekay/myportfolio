@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import LetsChatCta from './LetsChatCta'
 import DownloadCVCta from './DownloadCVCta'
+import Image from 'next/image'
 
 const Hero = () => {
     return (
@@ -14,8 +15,16 @@ const Hero = () => {
                     viewport={{ once: true }}
                     className='text-white font-black text-6xl tracking-tight w-auto sm:text-4xl'
                 >
-                    <span className='flex gap-4 items-center'><p>Hi there,</p> <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Wave_emoji_vhxgfl.png" alt="waving emoji" className='w-16 sm:w-12' /></span>
-                    <p>I'm Kome,<span className='text-black capitalize'>your friendly neighborhood web developer & designer</span> who's focused on learning and building great applications</p>
+                    <span className='flex gap-4 items-center'>
+                        <p>Hi there,</p>
+                        <div className='w-16 h-16 relative sm:w-12 sm:h-12'>
+                            <Image fill={true} src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Wave_emoji_vhxgfl.png" alt="waving emoji" className='object-contain absolute' />
+                        </div>
+                    </span>
+                    <p>I'm Kome,
+                        <span className='text-black capitalize'>your friendly neighborhood web developer & designer</span>
+                        who's focused on learning and building great applications
+                    </p>
                 </motion.div>
                 <div className='mt-12 flex gap-6 items-center sm:mt-8 sm:gap-4'>
                     <LetsChatCta />
@@ -23,7 +32,9 @@ const Hero = () => {
                 </div>
             </div>
             <motion.div initial={{ scale: 0, y: 60 }} animate={{ scale: [1, 1.2, 1], y: 0 }}>
-                <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499415/My%20portfolio/Hero_Image_rivmqt.png" alt="Hero-image" className='w-auto' />
+                <div className='w-[40rem] h-[30rem] relative sm:w-96 sm:h-64'>
+                    <Image fill={true} src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499415/My%20portfolio/Hero_Image_rivmqt.png" alt="Hero image" className='object-contain absolute' />
+                </div>
             </motion.div>
         </div>
     )

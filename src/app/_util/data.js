@@ -4,6 +4,9 @@ export const projects = [
 ]
 
 export const stackIcons = [
-    'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499419/My%20portfolio/Stack_NextJS_kwbosp.png', 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499411/My%20portfolio/Stack_NodeJS_n3fbre.png', 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Stack_React_aacmpc.png', 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Stack_Tailwind_rnywbf.png'
-];
+    { id: 1, image: 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499419/My%20portfolio/Stack_NextJS_kwbosp.png' },
+    { id: 2, image: 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499411/My%20portfolio/Stack_NodeJS_n3fbre.png' },
+    { id: 3, image: 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Stack_React_aacmpc.png' },
+    { id: 4, image: 'https://res.cloudinary.com/dgewamfyi/image/upload/v1721499412/My%20portfolio/Stack_Tailwind_rnywbf.png' },
+]
 

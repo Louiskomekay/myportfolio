@@ -5,6 +5,7 @@ import InfiniteScroll from './InfiniteScroll';
 import Link from 'next/link';
 import { projects, stackIcons } from '../_util/data';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const RestOfTheHomepage = () => {
     return (
@@ -47,15 +48,16 @@ const RestOfTheHomepage = () => {
                 </motion.button>
             </div>
 
-            {/* tech stack */}
+            {/* Tech stack */}
             <div className=' bg-[#5547FF]'>
                 <div className='w-[80%] mx-auto py-20 sm:w-[90%] sm:py-10'>
                     <h1 className='text-3xl text-white text-center sm:text-2xl'>Tech stack</h1>
                     <div className='bg-[#BFFF0A] p-8 rounded-2xl flex gap-4 mt-6 w-auto items-center drop-shadow-[-24px_28px_0_#4B3EE0] sm:flex-wrap sm:drop-shadow-[-12px_14px_0_#4B3EE0]'>
                         {stackIcons.map((item) => {
+                            const { id, image } = item
                             return (
-                                <div className='grow w-24 bg-black p-6 rounded-xl'>
-                                    <img src={item} alt='icon' className='w-24 mx-auto' />
+                                <div className='grow w-24 bg-black p-6 rounded-xl' key={id}>
+                                    <img src={image} alt='Tech stack' className='w-24 mx-auto' />
                                 </div>
                             )
                         })}
