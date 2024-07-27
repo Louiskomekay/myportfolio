@@ -50,9 +50,11 @@ const Navbar = () => {
                     <div className="relative">
                         <div className="flex justify-between mx-auto sm:w-[90%]">
                             {/* logo */}
-                            <Link href='/' className="cursor-pointer">
-                                <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499416/My%20portfolio/logo_orange_ocwd0o.png" alt="logo" className="w-28" />
-                            </Link>
+                            <button onClick={() => { setIsOpen(!isOpen) }}>
+                                <Link href='/' className="cursor-pointer">
+                                    <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499416/My%20portfolio/logo_orange_ocwd0o.png" alt="logo" className="w-28" />
+                                </Link>
+                            </button>
 
                             <button className="flex items-center" onClick={() => { setIsOpen(!isOpen) }}>
                                 {!isOpen ?
