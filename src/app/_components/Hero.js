@@ -32,9 +32,7 @@ const Hero = () => {
                 </div>
             </div>
             <motion.div initial={{ scale: 0, y: 60 }} animate={{ scale: [1, 1.2, 1], y: 0 }}>
-                <div className='w-[40rem] h-[30rem] relative sm:w-96 sm:h-64'>
-                    <Image fill={true} src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499415/My%20portfolio/Hero_Image_rivmqt.png" alt="Hero image" className='object-contain absolute' />
-                </div>
+                <img src="https://res.cloudinary.com/dgewamfyi/image/upload/v1721499415/My%20portfolio/Hero_Image_rivmqt.png" alt="Hero-image" className='w-auto' />
             </motion.div>
         </div>
     )
